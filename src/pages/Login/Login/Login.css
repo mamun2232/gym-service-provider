@@ -22,3 +22,21 @@
 .login-image img{
       width: 100%;
 }
+
+.clcik-link{
+    
+      font-weight: 600;
+      text-align: center;
+      font-size: 17px;
+}
+span a{
+      text-decoration: none;
+      color: rgb(29, 214, 214);;
+      font-size: 17px;
+      font-weight: 600;
+      
+}
+span a:hover{
+      color: rgb(39, 180, 219);
+
+}

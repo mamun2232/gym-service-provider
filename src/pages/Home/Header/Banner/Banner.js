@@ -9,7 +9,7 @@ const Banner = () => {
                                    <div className="col-lg-6">
                                    <h1>SHAPE YOUR PARFECT BODY</h1>
                               <p className='my-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero optio, numquam vel dolore ipsum ab!</p>
-                              <button className='btn btn-primary'>BYE NOW</button>
+                              <button className='primary-btn'>BYE NOW</button>
                                    </div>
                              </div>
 

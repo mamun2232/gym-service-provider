@@ -16,14 +16,16 @@
       display: inline;
 }
 .header-section .signup{
-      background-color: rgb(66, 219, 39);
+      /* background-color: rgb(66, 219, 39); */
+      background-color: rgb(29, 214, 214);
       color: aliceblue !important;
       border-radius: 10px;
       
       
 }
 .header-section .logout{
-      background-color: rgb(66, 219, 39);
+      /* background-color: rgb(66, 219, 39); */
+      background-color: rgb(29, 214, 214);
       color: aliceblue !important;
       border-radius: 10px;
       border: none;

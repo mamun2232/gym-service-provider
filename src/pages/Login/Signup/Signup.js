@@ -96,11 +96,11 @@ const Signup = () => {
                                                       </div>
                                                        <br />
                                                      
-                                                      <input disabled={!agree} className='btn btn-primary' type="submit" value="Login" />
+                                                      <input disabled={!agree} className='primary-btn' type="submit" value="Login" />
                                                 </div>
                                           </form>
                                           <SocialLogin></SocialLogin>
-                                          <p className='text-center text-primary mt-2'>Allready user? <span><Link to='/login'>Please login</Link></span></p>
+                                          <p className='clcik-link text-dark mt-2'>Allready user? <span><Link to='/login'>Please login</Link></span></p>
                                     </div>
                               </div>
                         </div>

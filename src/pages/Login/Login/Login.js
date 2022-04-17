@@ -81,12 +81,12 @@ const Login = () => {
                                                       <input ref={passwordRef} placeholder='Enter your password' type="password" name="password" id="" />
                                                       <br />
                                                       {errorMassage}
-                                                      <input className='btn btn-primary' type="submit" value="Signin" />
+                                                      <input className='primary-btn' type="submit" value="Signin" />
                                                       <p onClick={forgatePassword} className='text-primary mt-1 text-end'>Forgate password?</p>
                                                 </div>
                                           </form>
                                           <SocialLogin></SocialLogin>
-                                          <p className='text-center text-primary mt-2'>Gum new member? <span><Link to='/signup'>Please Signup</Link></span></p>
+                                          <p className='clcik-link text-dark mt-2'>Gym Center new member? <span><Link to='/signup'>Please Signup</Link></span></p>
                                     </div>
                               </div>
                         </div>

@@ -13,8 +13,8 @@ const SocialLogin = () => {
       const [signInWithFacebook, user2, loading2, error2] = useSignInWithFacebook(auth);
 
       // event hendeler ...............
-                             
-      
+
+
 
       return (
             <div className="social-log-in">
@@ -26,12 +26,12 @@ const SocialLogin = () => {
                   <div className="social-login my-3">
                         <div className="socials">
 
-                              <FcGoogle onClick={()=> signInWithGoogle()} className='google'></FcGoogle>
+                              <FcGoogle onClick={() => signInWithGoogle()} className='google'></FcGoogle>
                               <BsFacebook onClick={() => signInWithFacebook()} className='facebook'></BsFacebook>
-                              <BsGithub onClick={() => signInWithGithub() } className='github'></BsGithub>
+                              <BsGithub onClick={() => signInWithGithub()} className='github'></BsGithub>
 
                         </div>
-                      
+
 
                   </div>
             </div>

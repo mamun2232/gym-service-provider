@@ -17,7 +17,7 @@ const Header = () => {
   }
   console.log(user);
   return (
-    <div className="header-section">
+    <div className="header-section bg-light">
       <Navbar collapseOnSelect expand="lg" >
         <Container>
           <Navbar.Brand as={Link} to='/'>Gym Center</Navbar.Brand>
