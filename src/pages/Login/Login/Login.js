@@ -19,43 +19,43 @@ const Login = () => {
             users,
             loading,
             error,
-          ] = useSignInWithEmailAndPassword(auth);
-          const [user] = useAuthState(auth)
-          const navigiate = useNavigate('')
-          const [sendPasswordResetEmail, sending, errors] = useSendPasswordResetEmail(
+      ] = useSignInWithEmailAndPassword(auth);
+      const [user] = useAuthState(auth)
+      const navigiate = useNavigate('')
+      const [sendPasswordResetEmail, sending, errors] = useSendPasswordResetEmail(
             auth
-          );
+      );
 
 
 
       // event hendeler 
-      const signinForm = (event) =>{
+      const signinForm = (event) => {
             event.preventDefault()
             const email = emailRef.current.value
             const password = passwordRef.current.value
-            signInWithEmailAndPassword(email , password)
+            signInWithEmailAndPassword(email, password)
 
 
       }
       // forgate password 
-      const forgatePassword = () =>{
+      const forgatePassword = () => {
             const email = emailRef.current.value
-            if(email){
+            if (email) {
                   sendPasswordResetEmail(email)
 
             }
-            else{
+            else {
                   alert('enter Your email address')
             }
       }
 
-      if(error){
+      if (error) {
             errorMassage = <p className='text-danger'>{error?.message}</p>
       }
-      if(user){
+      if (user) {
             navigiate('/')
       }
-      
+
 
       return (
             <div className="container">
@@ -76,13 +76,13 @@ const Login = () => {
                                           <form onClick={signinForm}>
 
                                                 <div className="input-text">
-                                                      <input ref={emailRef } type="email" placeholder='Enter your email' name="email" id="" />
+                                                      <input ref={emailRef} type="email" placeholder='Enter your email' name="email" id="" />
                                                       <br />
                                                       <input ref={passwordRef} placeholder='Enter your password' type="password" name="password" id="" />
                                                       <br />
                                                       {errorMassage}
                                                       <input className='btn btn-primary' type="submit" value="Signin" />
-                                                      <p onClick={forgatePassword} className='text-primary mt-0'>Forgate password?</p>
+                                                      <p onClick={forgatePassword} className='text-primary mt-1 text-end'>Forgate password?</p>
                                                 </div>
                                           </form>
                                           <SocialLogin></SocialLogin>
