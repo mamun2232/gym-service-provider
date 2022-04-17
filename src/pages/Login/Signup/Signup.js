@@ -3,26 +3,35 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 import './Signup.css'
 
 import signup from '../../../picture/signup.jpg'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useAuthState, useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 
 
 const Signup = () => {
+      // state ------------
       const nameRef = useRef('')
       const emailRef = useRef('')
       const passwordRef = useRef('')
       const confrimPassRef = useRef('')
       const [error1, setError] = useState('')
-      let errorMassage;
+     
+     let errorMassage;
+
+      // hooks ----------
+      const [user] = useAuthState(auth)
+      const navigate = useNavigate('')
       const [
             createUserWithEmailAndPassword,
-            user,
+            users,
             loading,
             error,
           ] = useCreateUserWithEmailAndPassword(auth);
 
-      const formSubmit = (event) =>{
+          const [updateProfile, updating, errors] = useUpdateProfile(auth);
+
+      // even Handeler ------------
+      const formSubmit = async  (event) =>{
             event.preventDefault()
             const name = nameRef.current.value
             const email = emailRef.current.value
@@ -30,16 +39,21 @@ const Signup = () => {
             const confrimPass = confrimPassRef.current.value
             console.log(name, email, password, confrimPass);
             if(password !== confrimPass){
-                  setError('Your Password Dont Match')
+                  setError('Your password dont match')
                   return
             }
             setError('')
-            createUserWithEmailAndPassword(email, password)
+            await createUserWithEmailAndPassword(email, password)
+            await updateProfile({ displayName: name })
             
       }
       // error massage 
       if(error){
             errorMassage = <p className='text-danger'>{error?.message}</p>
+      }
+
+      if(user){
+            navigate('/')
       }
       
 
@@ -62,13 +76,13 @@ const Signup = () => {
 
                                                 <div className="input-text">
 
-                                                      <input ref={nameRef} type="text" placeholder='Enter your name' name="email" id="" />
+                                                      <input ref={nameRef} type="text" placeholder='Enter your name' name="email" id="" required />
                                                       <br />
-                                                      <input ref={emailRef} type="email" placeholder='Enter your email' name="email" id="" />
+                                                      <input ref={emailRef} type="email" placeholder='Enter your email' name="email" id="" required />
                                                       <br />
-                                                      <input ref={passwordRef} placeholder='Enter your password' type="password" name="password" id="" />
+                                                      <input ref={passwordRef} placeholder='Enter your password' type="password" name="password" id="" required />
                                                       <br />
-                                                      <input ref={confrimPassRef}  placeholder='Enter your confrim password' type="password" name="password" id="" />
+                                                      <input ref={confrimPassRef}  placeholder='Enter your confrim password' type="password" name="password" id="" required />
                                                      
                                                       <br />
                                                       {errorMassage || <p className='text-danger'>{error1}</p>}

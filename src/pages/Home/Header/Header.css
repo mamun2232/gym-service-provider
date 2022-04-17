@@ -22,4 +22,13 @@
       
       
 }
+.header-section .logout{
+      background-color: rgb(66, 219, 39);
+      color: aliceblue !important;
+      border-radius: 10px;
+      border: none;
+      font-weight: 600;
+      padding: 0px 10px;
+      font-size: 18px;
+}
 
