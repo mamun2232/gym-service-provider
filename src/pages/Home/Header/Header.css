@@ -1,0 +1,25 @@
+/* .header{
+      background-color: rgb(171, 177, 183);
+} */
+/* .header-section .Navber{
+      background-color: rgb(236, 34, 34);
+} */
+
+
+
+.header-section a{
+      color: rgb(9, 9, 9)!important;
+      font-size: 18px;
+      margin: 0px 12px !important;
+      font-weight: 600;
+      
+      display: inline;
+}
+.header-section .signup{
+      background-color: rgb(66, 219, 39);
+      color: aliceblue !important;
+      border-radius: 10px;
+      
+      
+}
+

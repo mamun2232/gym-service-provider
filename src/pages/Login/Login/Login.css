@@ -1,0 +1,24 @@
+.login-section{
+      border: 1px solid lavender;
+      width: 100%;
+     
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 60px;
+     padding-bottom: 50px;
+      
+}
+
+.input-text input:not([type=checkbox]){
+      width: 420px;
+      height: 40px;
+      margin-bottom: 13px;
+      border-radius: 7px;
+      padding: 5px;
+      font-size: 18px;
+      border: 1px solid lavender;
+}
+.login-image img{
+      width: 100%;
+}
