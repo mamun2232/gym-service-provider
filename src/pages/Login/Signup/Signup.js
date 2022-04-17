@@ -5,7 +5,7 @@ import './Signup.css'
 import signup from '../../../picture/signup.jpg'
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
-import { useAuthState, useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
+import { useAuthState, useCreateUserWithEmailAndPassword, useSendEmailVerification, useUpdateProfile } from 'react-firebase-hooks/auth';
 
 
 const Signup = () => {
@@ -28,9 +28,10 @@ const Signup = () => {
             users,
             loading,
             error,
-          ] = useCreateUserWithEmailAndPassword(auth);
+          ] = useCreateUserWithEmailAndPassword(auth , {sendEmailVerification: true});
 
           const [updateProfile, updating, errors] = useUpdateProfile(auth);
+       
 
       // even Handeler ------------
       const formSubmit = async  (event) =>{
@@ -49,6 +50,7 @@ const Signup = () => {
             await updateProfile({ displayName: name })
             
       }
+
       // error massage 
       if(error){
             errorMassage = <p className='text-danger'>{error?.message}</p>
