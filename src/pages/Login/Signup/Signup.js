@@ -15,6 +15,8 @@ const Signup = () => {
       const passwordRef = useRef('')
       const confrimPassRef = useRef('')
       const [error1, setError] = useState('')
+      const [agree , serAgree] = useState(false)
+      console.log(agree);
      
      let errorMassage;
 
@@ -87,12 +89,12 @@ const Signup = () => {
                                                       <br />
                                                       {errorMassage || <p className='text-danger'>{error1}</p>}
                                                       <div className=''>
-                                                      <input className='chackbox' type="checkbox" name="" id="" />
-                                                       <label className='mx-2' htmlFor="chackbox">Accept Red onion Terms and Conditions</label>
+                                                      <input onClick={() => serAgree(!agree)} className='chackbox' type="checkbox" name="" id="" />
+                                                       <label className={`px-2 ${agree ? '' : 'text-danger'}`}htmlFor="chackbox">Accept Red onion Terms and Conditions</label>
                                                       </div>
                                                        <br />
                                                      
-                                                      <input className='' type="submit" value="Login" />
+                                                      <input disabled={!agree} className='btn btn-primary' type="submit" value="Login" />
                                                 </div>
                                           </form>
                                           <SocialLogin></SocialLogin>
