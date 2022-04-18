@@ -1,0 +1,7 @@
+.blog-section{
+      height: 700px;
+}
+.blog-section span , li{
+      font-size: 20px;
+      line-height: 40px;
+}

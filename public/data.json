@@ -1,69 +1,57 @@
 [
-      {
-        "id": 1,
-        "category": "Verry testy food",
-        "name": "Yoga for Beginners",
-        "price": 400,
-        "ratings": 4,
-        "img": "https://i.ibb.co/s2BFRVC/image2.webp"
-      },
-      {
-        "id": 2,
-        "category": "Verry testy food",
-        "name": "Meditation",
-        "price": 450,
-     
-        "ratings": 5,
-     
-        "img": " https://i.ibb.co/Gv7vTY0/image3.jpg",
-        "shipping": 14,
-        "quantity": 0
-      },
-      {
-        "id": 3,
-        "category": "Verry testy food",
-        "name": "Foundation Flow",
-        "price": 240,
-        "stock": 20,
-        "ratings": 4,
-        
-        "img": "https://i.ibb.co/grqhpqN/image4.jpg",
-        "shipping": 1,
-        "quantity": 0
-      },
-      {
-        "id": 4,
-        "category": "Verry testy food",
-        "name": "Fitness Classes",
-        "seller": "Addidas",
-        "price": 560,
-      
-        "ratings": 5,
-    
-        "img": "https://i.ibb.co/nr5CH9B/img5.webp",
-        "shipping": 32,
-        "quantity": 0
-      },
-      {
-        "id": 5,
-        "category": "Verry testy food",
-        "name": "Cardio Exercises",
-        "price": 110,
-        "ratings": 4,
-       
-        "img": "https://i.ibb.co/wMN769M/images-3.jpg",
-        "shipping": 49,
-        "quantity": 0
-      },
-      {
-        "id": 6,
-        "category": "Weightlifting",
-        "name": "Weightlifting ",
-        "price": 900,
-        "ratings": 4,
-       
-        "img": "https://i.ibb.co/9hhVqXy/img6.webp",
-        "shipping": 49,
-        "quantity": 0
-      }
+  {
+    "id": 1,
+    "category": "Fit Body Fit Mind",
+    "name": "Yoga For Beginners",
+    "price": 400,
+    "ratings": 4,
+    "img": "https://i.ibb.co/s2BFRVC/image2.webp"
+  },
+  {
+    "id": 2,
+    "category": "Make All Time Mind Cool",
+    "name": "Meditation",
+    "price": 450,
+    "ratings": 5,
+    "img": " https://i.ibb.co/Gv7vTY0/image3.jpg"
+   
+  },
+  {
+    "id": 3,
+    "category": "Make Boom Fitness",
+    "name": "Foundation Flow",
+    "price": 240,
+    "stock": 20,
+    "ratings": 4,
+    "img": "https://i.ibb.co/grqhpqN/image4.jpg"
+  
+  },
+  {
+    "id": 4,
+    "category": "The Body Does Well",
+    "name": "Fitness Classes",
+    "seller": "Addidas",
+    "price": 560,
+    "ratings": 5,
+    "img": "https://i.ibb.co/nr5CH9B/img5.webp"
+  
+  },
+  {
+    "id": 5,
+    "category": "Makes Life Easier",
+    "name": "Cardio Exercises",
+    "price": 110,
+    "ratings": 4,
+    "img": "https://i.ibb.co/wMN769M/images-3.jpg"
+   
+  },
+  {
+    "id": 6,
+    "category": "Kepps The Mind Well",
+    "name": "Simple Exercises",
+    "price": 900,
+    "ratings": 4,
+    "img": "https://i.ibb.co/9hhVqXy/img6.webp"
+   
+  }
 ]

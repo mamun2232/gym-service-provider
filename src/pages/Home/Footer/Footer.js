@@ -1,9 +1,10 @@
 import React from 'react';
 import './Footer.css'
 import warkpic from '../../../picture/gum.jpg'
+import { AiFillRightCircle } from 'react-icons/ai';
 const Footer = () => {
       return (
-            <div className="footer-section bg-dark">
+            <div className="footer-section bg-dark mt-5">
                   <div className="container">
                       <div className="row">
                             <div className="col-lg-4">
@@ -11,7 +12,7 @@ const Footer = () => {
                                         <h5 className='text-center'>Subscribe us</h5>
                                         <input type="email" name="" className='form-control' placeholder='Enter Your Email' id="" />
                                        <div className='text-center mt-2'>
-                                       <button className='primary-btn'>Get Notified</button>
+                                       <button className='primary-btn'>Get Notified <AiFillRightCircle ></AiFillRightCircle></button>
                                        </div>
                                   </div>
                             </div>

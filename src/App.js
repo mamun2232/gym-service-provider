@@ -11,6 +11,8 @@ import Signup from './pages/Login/Signup/Signup';
 import RequireAuth from './pages/Login/RequireAuth/RequireAuth';
 import Blogs from './pages/Home/Blogs/Blogs';
 import About from './pages/Home/About/About';
+import PageNotFound from './pages/Utilitis/PageNotFound/PageNotFound';
+import Footer from './pages/Home/Footer/Footer';
 
 
 
@@ -30,9 +32,11 @@ function App() {
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
+        <Route path='*' element={<PageNotFound></PageNotFound>}></Route>
 
 
       </Routes>
+      
     </div>
   );
 }

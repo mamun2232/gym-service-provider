@@ -11,4 +11,11 @@
 }
 .my-goal{
       padding: 10px;
+      display: flex;
+      align-items: center;
+}
+.my-goal span {
+      font-size: 25px;
+      line-height: 44px;
+      
 }

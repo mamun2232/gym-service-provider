@@ -98,7 +98,7 @@ const Signup = () => {
                                                       </div>
                                                       <br />
 
-                                                      <input disabled={!agree} className='primary-btn' type="submit" value="Registor" />
+                                                      <input disabled={!agree} className={`${agree ? 'agrre-btn' : 'primary-btn'}`} type="submit" value="Registor" />
                                                 </div>
                                           </form>
                                           <SocialLogin></SocialLogin>

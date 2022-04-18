@@ -1,5 +1,7 @@
 import React from 'react';
 import { Accordion } from 'react-bootstrap';
+import Footer from '../Footer/Footer';
+import './Blogs.css'
 
 const Blogs = () => {
       return (
@@ -11,7 +13,8 @@ const Blogs = () => {
                                     <Accordion.Header>Authentication or Authorization পার্থক্য কি?
                                     </Accordion.Header>
                                     <Accordion.Body>
-                                          <span>Authentication এমন একটি সিষ্টেম অথবা পোগ্রাম যার মাধ্যমে ইউজারকে ভেরিফাই করা যায়। অর্থাৎ কাউকে, কোনো কিছু, কারো কোনো তথ্য,যা সঠিক বলে দাবী করা হচ্ছে প্রকৃতিপক্ষে তা সত্য কিনা নির্ণয় করার প্রক্রিয়া।</span>
+                                          <span className='
+                                          '>Authentication এমন একটি সিষ্টেম অথবা পোগ্রাম যার মাধ্যমে ইউজারকে ভেরিফাই করা যায়। অর্থাৎ কাউকে, কোনো কিছু, কারো কোনো তথ্য,যা সঠিক বলে দাবী করা হচ্ছে প্রকৃতিপক্ষে তা সত্য কিনা নির্ণয় করার প্রক্রিয়া।</span>
                                           <span>এটি করার ফলে ইউজার ওয়েব সাইটে থাকা রিসোস খুব সহজে এক্সসেপ্ট করতে পারে। রিড করতে পারে।</span>
                                           <span>Authorization এর মাধ্যমে কাউকে কোনো কাজ করার জন্য বা কোনো resource ব্যবহার করতে পারার permission দেওয়ার প্রক্রিয়া। এই parmision দেওয়া ফলে একজন ইউজার ওয়েভ সাইয়ের সব তর্থ্য দেখতে পারবে যা সমাধান ইউজার থাকা অবস্থায় দেখা অসম্ভব।</span>
 
@@ -55,6 +58,7 @@ const Blogs = () => {
                               </Accordion.Item>
                         </Accordion>
                   </div>
+                  <Footer></Footer>
             </div>
       );
 };

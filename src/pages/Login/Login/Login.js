@@ -7,6 +7,7 @@ import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword 
 import auth from '../../../firebase.init';
 import Loadding from '../../Utilitis/Loadding/Loadding';
 import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
       let errorMassage;
@@ -49,12 +50,12 @@ const Login = () => {
             const email = emailRef.current.value
             if (email) {
                   await sendPasswordResetEmail(email)
-                  toast('pass send')
+                  toast('Send Email')
                   
 
             }
             else {
-                  alert('enter Your email address')
+                  toast('Please Provite Email')
             }
       }
             

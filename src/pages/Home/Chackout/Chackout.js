@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import Footer from '../Footer/Footer';
 
 const Chackout = () => {
       const nameRef = useRef('')
@@ -33,7 +34,7 @@ const Chackout = () => {
 
 
 
-                                                <input className='primary-btn' type="submit" value="Chackout" />
+                                                <input className='primary-btn' type="submit" value="Checkout" />
                                           </div>
                                     </form>
 
@@ -41,6 +42,7 @@ const Chackout = () => {
                               </div>
                         </div>
                   </div>
+                  <Footer></Footer>
             </div>
       );
 };
