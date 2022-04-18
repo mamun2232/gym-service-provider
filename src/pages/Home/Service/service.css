@@ -7,15 +7,15 @@
       border-radius: 10px;
       /* border-bottom: 4px solid rgb(97, 228, 32);
       border-left: 4px solid rgb(97, 228, 32); */
-      border-bottom: 4px solid rgb(29, 214, 214);
-      border-left: 4px solid rgb(29, 214, 214);
+      border-bottom: 4px solid rgb(39, 180, 219);
+      border-left: 4px solid rgb(39, 180, 219);
       
       padding: 10px;
 }
 
 .primary-btn{
       /* background-color: rgb(66, 219, 39); */
-      background-color: rgb(29, 214, 214);
+      background-color: rgb(39, 180, 219);
       color: aliceblue ;
       
       border-radius: 10px;
@@ -26,5 +26,5 @@
 .primary-btn:hover{
       color: aliceblue;
       /* background-color: rgb(66, 219, 39); */
-      background-color: rgb(39, 180, 219);
+      background-color: rgb(29, 214, 214);
 }

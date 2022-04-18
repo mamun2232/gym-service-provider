@@ -5,6 +5,7 @@ import loginpic from '../../../picture/6343845.jpg'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import Loadding from '../../Utilitis/Loadding/Loadding';
 
 const Login = () => {
       let errorMassage;
@@ -52,6 +53,10 @@ const Login = () => {
                   alert('enter Your email address')
             }
       }
+            
+      if(loading){
+            return <Loadding></Loadding>
+      }
 
       if (error) {
             errorMassage = <p className='text-danger'>{error?.message}</p>
@@ -85,7 +90,7 @@ const Login = () => {
                                                       <input ref={passwordRef} placeholder='Enter your password' type="password" name="password" id="" />
                                                       <br />
                                                       {errorMassage}
-                                                      <input className='primary-btn' type="submit" value="Signin" />
+                                                      <input className='primary-btn' type="submit" value="Login" />
                                                       <p onClick={forgatePassword} className='text-primary mt-1 text-end'>Forgate password?</p>
                                                 </div>
                                           </form>

@@ -6,6 +6,7 @@ import signup from '../../../picture/signup.jpg'
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import { useAuthState, useCreateUserWithEmailAndPassword, useSendEmailVerification, useUpdateProfile } from 'react-firebase-hooks/auth';
+import Loadding from '../../Utilitis/Loadding/Loadding';
 
 
 const Signup = () => {
@@ -48,7 +49,11 @@ const Signup = () => {
             setError('')
             await createUserWithEmailAndPassword(email, password)
             await updateProfile({ displayName: name })
+            navigate('/')
             
+      }
+      if(loading){
+            return <Loadding></Loadding>
       }
 
       // error massage 
@@ -56,9 +61,6 @@ const Signup = () => {
             errorMassage = <p className='text-danger'>{error?.message}</p>
       }
 
-      if(user){
-            navigate('/')
-      }
       
 
       return (
@@ -74,7 +76,7 @@ const Signup = () => {
                               <div className="login-section">
 
                                     <div className='from-container'>
-                                          <h3 className='my-5 text-center' >Signup</h3>
+                                          <h3 className='my-5 text-center' >Please Registor</h3>
 
                                           <form onSubmit={formSubmit}>
 
@@ -96,7 +98,7 @@ const Signup = () => {
                                                       </div>
                                                        <br />
                                                      
-                                                      <input disabled={!agree} className='primary-btn' type="submit" value="Login" />
+                                                      <input disabled={!agree} className='primary-btn' type="submit" value="Registor" />
                                                 </div>
                                           </form>
                                           <SocialLogin></SocialLogin>
