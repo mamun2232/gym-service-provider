@@ -3,7 +3,7 @@
         "id": 1,
         "category": "Verry testy food",
         "name": "Yoga for Beginners",
-        "price": 120,
+        "price": 400,
         "ratings": 4,
         "img": "https://i.ibb.co/s2BFRVC/image2.webp"
       },
@@ -11,7 +11,7 @@
         "id": 2,
         "category": "Verry testy food",
         "name": "Meditation",
-        "price": 130,
+        "price": 450,
      
         "ratings": 5,
      
@@ -23,7 +23,7 @@
         "id": 3,
         "category": "Verry testy food",
         "name": "Foundation Flow",
-        "price": 140,
+        "price": 240,
         "stock": 20,
         "ratings": 4,
         
@@ -36,7 +36,7 @@
         "category": "Verry testy food",
         "name": "Fitness Classes",
         "seller": "Addidas",
-        "price": 160,
+        "price": 560,
       
         "ratings": 5,
     
@@ -51,15 +51,15 @@
         "price": 110,
         "ratings": 4,
        
-        "img": "https://i.ibb.co/ngXY1fS/dinner5.png",
+        "img": "https://i.ibb.co/wMN769M/images-3.jpg",
         "shipping": 49,
         "quantity": 0
       },
       {
         "id": 6,
         "category": "Weightlifting",
-        "name": "Egg and Bread ",
-        "price": 70,
+        "name": "Weightlifting ",
+        "price": 900,
         "ratings": 4,
        
         "img": "https://i.ibb.co/9hhVqXy/img6.webp",

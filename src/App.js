@@ -9,6 +9,8 @@ import Login from './pages/Login/Login/Login';
 import Chackout from './pages/Home/Chackout/Chackout';
 import Signup from './pages/Login/Signup/Signup';
 import RequireAuth from './pages/Login/RequireAuth/RequireAuth';
+import Blogs from './pages/Home/Blogs/Blogs';
+import About from './pages/Home/About/About';
 
 
 
@@ -24,6 +26,8 @@ function App() {
             <Chackout></Chackout>
           </RequireAuth>
         }></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/about' element={<About></About>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
 

@@ -102,7 +102,8 @@ const Signup = () => {
                                                 </div>
                                           </form>
                                           <SocialLogin></SocialLogin>
-                                          <p className='clcik-link text-dark mt-2'>Allready user? <span><Link to='/login'>Please login</Link></span></p>
+                                          {user ? <p className='clcik-link text-dark mt-2'>You Allready Login. <span><Link to='/login'>go home</Link></span></p> : <p className='clcik-link text-dark mt-2'>You Allready registed? <span><Link to='/login'>Please login</Link></span></p> }
+                                          
                                     </div>
                               </div>
                         </div>
