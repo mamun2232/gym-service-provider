@@ -92,7 +92,7 @@ const Signup = () => {
                                                       {errorMassage || <p className='text-danger'>{error1}</p>}
                                                       <div className=''>
                                                       <input onClick={() => serAgree(!agree)} className='chackbox' type="checkbox" name="" id="" />
-                                                       <label className={`px-2 ${agree ? '' : 'text-danger'}`}htmlFor="chackbox">Accept Red onion Terms and Conditions</label>
+                                                       <label className={`px-2 ${agree ? '' : 'text-danger'}`}htmlFor="chackbox">Accept Gym Center Terms and Conditions</label>
                                                       </div>
                                                        <br />
                                                      

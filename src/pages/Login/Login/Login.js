@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css'
 import loginpic from '../../../picture/6343845.jpg'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 
@@ -11,6 +11,7 @@ const Login = () => {
       // state ---------
       const emailRef = useRef('')
       const passwordRef = useRef('')
+      
 
 
       // hooks ----------
@@ -25,6 +26,9 @@ const Login = () => {
       const [sendPasswordResetEmail, sending, errors] = useSendPasswordResetEmail(
             auth
       );
+
+      let location = useLocation();
+      let from = location.state?.from?.pathname || "/";
 
 
 
@@ -53,7 +57,7 @@ const Login = () => {
             errorMassage = <p className='text-danger'>{error?.message}</p>
       }
       if (user) {
-            navigiate('/')
+            navigiate(from, { replace: true })
       }
 
 

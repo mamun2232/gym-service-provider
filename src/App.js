@@ -8,22 +8,27 @@ import Login from './pages/Login/Login/Login';
 
 import Chackout from './pages/Home/Chackout/Chackout';
 import Signup from './pages/Login/Signup/Signup';
+import RequireAuth from './pages/Login/RequireAuth/RequireAuth';
 
 
 
 function App() {
   return (
     <div className="gym-service">
-     <Header></Header>
-     
-     <Routes>
-       <Route path='/' element={<Home></Home>}></Route>
-       <Route path='/chackout' element={<Chackout></Chackout>}></Route>
-       <Route path='/login' element={<Login></Login>}></Route>
-       <Route path='/signup' element={<Signup></Signup>}></Route>
-       
-       
-     </Routes>
+      <Header></Header>
+
+      <Routes>
+        <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/chackout' element={
+          <RequireAuth>
+            <Chackout></Chackout>
+          </RequireAuth>
+        }></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/signup' element={<Signup></Signup>}></Route>
+
+
+      </Routes>
     </div>
   );
 }
