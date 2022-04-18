@@ -1,0 +1,14 @@
+.my-image img{
+      width: 350px;
+     padding: 10px;
+      
+      border-radius: 15px;
+}
+.my-image{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+.my-goal{
+      padding: 10px;
+}
