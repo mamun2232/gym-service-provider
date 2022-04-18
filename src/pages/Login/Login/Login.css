@@ -41,3 +41,12 @@ span a:hover{
       color: rgb(39, 180, 219);
 
 }
+.forgatepass{
+      cursor: pointer;
+}
+@media screen and (max-width:560px) {
+      .input-text input:not([type=checkbox]){
+            width: 300px;
+           
+      }
+}

@@ -16,10 +16,10 @@ const Signup = () => {
       const passwordRef = useRef('')
       const confrimPassRef = useRef('')
       const [error1, setError] = useState('')
-      const [agree , serAgree] = useState(false)
+      const [agree, serAgree] = useState(false)
       console.log(agree);
-     
-     let errorMassage;
+
+      let errorMassage;
 
       // hooks ----------
       const [user] = useAuthState(auth)
@@ -29,20 +29,20 @@ const Signup = () => {
             users,
             loading,
             error,
-          ] = useCreateUserWithEmailAndPassword(auth , {sendEmailVerification: true});
+      ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
-          const [updateProfile, updating, errors] = useUpdateProfile(auth);
-       
+      const [updateProfile, updating, errors] = useUpdateProfile(auth);
+
 
       // even Handeler ------------
-      const formSubmit = async  (event) =>{
+      const formSubmit = async (event) => {
             event.preventDefault()
             const name = nameRef.current.value
             const email = emailRef.current.value
             const password = passwordRef.current.value
             const confrimPass = confrimPassRef.current.value
             console.log(name, email, password, confrimPass);
-            if(password !== confrimPass){
+            if (password !== confrimPass) {
                   setError('Your password dont match')
                   return
             }
@@ -50,18 +50,18 @@ const Signup = () => {
             await createUserWithEmailAndPassword(email, password)
             await updateProfile({ displayName: name })
             navigate('/')
-            
+
       }
-      if(loading){
+      if (loading) {
             return <Loadding></Loadding>
       }
 
       // error massage 
-      if(error){
+      if (error) {
             errorMassage = <p className='text-danger'>{error?.message}</p>
       }
 
-      
+
 
       return (
             <div className="container">
@@ -88,22 +88,25 @@ const Signup = () => {
                                                       <br />
                                                       <input ref={passwordRef} placeholder='Enter your password' type="password" name="password" id="" required />
                                                       <br />
-                                                      <input ref={confrimPassRef}  placeholder='Enter your confrim password' type="password" name="password" id="" required />
-                                                     
+                                                      <input ref={confrimPassRef} placeholder='Enter your confrim password' type="password" name="password" id="" required />
+
                                                       <br />
                                                       {errorMassage || <p className='text-danger'>{error1}</p>}
                                                       <div className=''>
-                                                      <input onClick={() => serAgree(!agree)} className='chackbox' type="checkbox" name="" id="" />
-                                                       <label className={`px-2 ${agree ? '' : 'text-danger'}`}htmlFor="chackbox">Accept Gym Center Terms and Conditions</label>
+                                                            <input onClick={() => serAgree(!agree)} className='chackbox' type="checkbox" name="" id="" />
+                                                            <label className={`px-2 ${agree ? '' : 'text-danger'}`} htmlFor="chackbox">Accept Gym Center Terms and Conditions</label>
                                                       </div>
-                                                       <br />
-                                                     
+                                                      <br />
+
                                                       <input disabled={!agree} className='primary-btn' type="submit" value="Registor" />
                                                 </div>
                                           </form>
                                           <SocialLogin></SocialLogin>
-                                          {user ? <p className='clcik-link text-dark mt-2'>You Allready Login. <span><Link to='/login'>go home</Link></span></p> : <p className='clcik-link text-dark mt-2'>You Allready registed? <span><Link to='/login'>Please login</Link></span></p> }
                                           
+                                             {user ? <p className='clcik-link text-dark mt-2'>You Allready Login. <span><Link to='/login'>go home</Link></span></p> :
+                                             <p className='clcik-link text-dark mt-2'>You Allready Login. <span><Link to='/login'>Please Login</Link></span></p>
+                                             
+                                             }
                                     </div>
                               </div>
                         </div>

@@ -6,6 +6,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import Loadding from '../../Utilitis/Loadding/Loadding';
+import { toast, ToastContainer } from 'react-toastify';
 
 const Login = () => {
       let errorMassage;
@@ -39,14 +40,17 @@ const Login = () => {
             const email = emailRef.current.value
             const password = passwordRef.current.value
             signInWithEmailAndPassword(email, password)
+            console.log('click');
 
 
       }
       // forgate password 
-      const forgatePassword = () => {
+      const forgatePassword = async () => {
             const email = emailRef.current.value
             if (email) {
-                  sendPasswordResetEmail(email)
+                  await sendPasswordResetEmail(email)
+                  toast('pass send')
+                  
 
             }
             else {
@@ -82,7 +86,7 @@ const Login = () => {
                                     <div className='from-container'>
                                           <h3 className='my-5 text-center' >login</h3>
 
-                                          <form onClick={signinForm}>
+                                          <form onSubmit={signinForm}>
 
                                                 <div className="input-text">
                                                       <input ref={emailRef} type="email" placeholder='Enter your email' name="email" id="" />
@@ -91,11 +95,14 @@ const Login = () => {
                                                       <br />
                                                       {errorMassage}
                                                       <input className='primary-btn' type="submit" value="Login" />
-                                                      <p onClick={forgatePassword} className='text-primary mt-1 text-end'>Forgate password?</p>
+                                                      <p onClick={forgatePassword} className='text-primary mt-1 text-end forgatepass'>Forgate password?</p>
                                                 </div>
                                           </form>
                                           <SocialLogin></SocialLogin>
-                                          <p className='clcik-link text-dark mt-2'>Gym Center new member? <span><Link to='/signup'>Please Signup</Link></span></p>
+                                          <p className='clcik-link text-dark mt-2'>Gym Center new member? <span><Link to='/signup'>Please Register</Link></span></p>
+                                          <ToastContainer></ToastContainer>
+                                          
+                                         
                                     </div>
                               </div>
                         </div>
