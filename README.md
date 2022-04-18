@@ -7,7 +7,7 @@ it Gym center project
 
 ## Demo
 
-Please viseted my web site
+Please viseted my web site https://gym-center-d1db7.web.app
 
 
 ## Features
