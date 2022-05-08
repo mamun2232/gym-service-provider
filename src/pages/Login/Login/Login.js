@@ -60,7 +60,7 @@ const Login = () => {
       }
             
       if(loading){
-            return <Loadding></Loadding>
+        <Loadding></Loadding>
       }
 
       if (error) {
