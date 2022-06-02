@@ -30,6 +30,7 @@ const Header = () => {
             <Nav className='text-center'>
             <Nav.Link  as={Link} to='/chackout'>Checkout</Nav.Link>
               <Nav.Link as={Link} to='/blogs' >Blogs</Nav.Link>
+              {user &&  <Nav.Link as={Link} to='/Dashboard' >Dashboard</Nav.Link>}
               <Nav.Link as={Link} to='/about' >About</Nav.Link>
               {user ? <button onClick={logout} className='logout'>Logout</button> : <Nav.Link className='' as={Link} to='/login'>Login</Nav.Link>}
               

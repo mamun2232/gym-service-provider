@@ -7,6 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import { useAuthState, useCreateUserWithEmailAndPassword, useSendEmailVerification, useUpdateProfile } from 'react-firebase-hooks/auth';
 import Loadding from '../../Utilitis/Loadding/Loadding';
+import useToken from '../../Hook/useToken';
 
 
 const Signup = () => {
@@ -26,7 +27,7 @@ const Signup = () => {
       const navigate = useNavigate('')
       const [
             createUserWithEmailAndPassword,
-            users,
+            Csers,
             loading,
             error,
       ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
@@ -49,12 +50,23 @@ const Signup = () => {
             setError('')
             await createUserWithEmailAndPassword(email, password)
             await updateProfile({ displayName: name })
-            navigate('/')
+            // navigate('/')
 
       }
+      const [token] = useToken(Csers)
+      console.log(token);
+
+     
+      
       if (loading) {
             return <Loadding></Loadding>
       }
+      if(token){
+            navigate('/')
+
+     }
+
+      
 
       // error massage 
       if (error) {

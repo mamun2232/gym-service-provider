@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    
     "category": "Fit Body Fit Mind",
     "name": "Yoga For Beginners",
     "price": 400,
@@ -8,7 +8,7 @@
     "img": "https://i.ibb.co/s2BFRVC/image2.webp"
   },
   {
-    "id": 2,
+   
     "category": "Make All Time Mind Cool",
     "name": "Meditation",
     "price": 450,
@@ -17,7 +17,7 @@
    
   },
   {
-    "id": 3,
+ 
     "category": "Make Boom Fitness",
     "name": "Foundation Flow",
     "price": 240,
@@ -27,7 +27,7 @@
   
   },
   {
-    "id": 4,
+  
     "category": "The Body Does Well",
     "name": "Fitness Classes",
     "seller": "Addidas",
@@ -37,7 +37,7 @@
   
   },
   {
-    "id": 5,
+   
     "category": "Makes Life Easier",
     "name": "Cardio Exercises",
     "price": 110,
@@ -46,7 +46,7 @@
    
   },
   {
-    "id": 6,
+   
     "category": "Kepps The Mind Well",
     "name": "Simple Exercises",
     "price": 900,

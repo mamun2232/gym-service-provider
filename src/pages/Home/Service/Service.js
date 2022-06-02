@@ -1,12 +1,14 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,} from 'react-router-dom';
 import './service.css'
 import { BsFillCartCheckFill } from 'react-icons/bs';
 
 
 const Service = ({service}) => {
       const navigate = useNavigate('')
-      const {name, img , price , category} = service
+      
+
+      const {_id, name, img , price , category} = service
       return (
             <div className=" service-container">
                   <div className="service-image">
@@ -17,7 +19,7 @@ const Service = ({service}) => {
                         <h4>{name}</h4>
                         <span className='text-muted my-2'>{category}</span>
                         <h3 className='mt-2'>${price}</h3>
-                        <button onClick={() => navigate('/chackout')} className='primary-btn'>Checkout <BsFillCartCheckFill></BsFillCartCheckFill></button>
+                        <button onClick={() => navigate(`/chackout/${_id}`)} className='primary-btn'>Checkout <BsFillCartCheckFill></BsFillCartCheckFill></button>
 
                   </div>
             </div>

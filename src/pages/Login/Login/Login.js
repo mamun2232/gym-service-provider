@@ -3,11 +3,12 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css'
 import loginpic from '../../../picture/6343845.jpg'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import Loadding from '../../Utilitis/Loadding/Loadding';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useToken from '../../Hook/useToken';
 
 const Login = () => {
       let errorMassage;
@@ -29,6 +30,8 @@ const Login = () => {
       const [sendPasswordResetEmail, sending, errors] = useSendPasswordResetEmail(
             auth
       );
+      const [token] = useToken(users)
+      console.log(token);
 
       let location = useLocation();
       let from = location.state?.from?.pathname || "/";
@@ -41,7 +44,8 @@ const Login = () => {
             const email = emailRef.current.value
             const password = passwordRef.current.value
             signInWithEmailAndPassword(email, password)
-            console.log('click');
+    
+          
 
 
       }
@@ -66,7 +70,7 @@ const Login = () => {
       if (error) {
             errorMassage = <p className='text-danger'>{error?.message}</p>
       }
-      if (user) {
+      if (token) {
             navigiate(from, { replace: true })
       }
 

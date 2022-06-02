@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react';
 import Service from '../Service/Service';
 import './Services.css'
 const Services = () => {
-      const [services, setServices] = useState([])
+      const [servicess, setServices] = useState([])
       useEffect(() => {
-            fetch('data.json')
+            fetch('http://localhost:5000/service')
                   .then(res => res.json())
                   .then(data => setServices(data))
       }, [])
+      const services = servicess.slice(0 , 6)
       return (
             <div className="  services-section">
                   <div className="container">
